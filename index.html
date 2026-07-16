@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Vanani - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        display: ['Anton', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#F3EFE7',
+                            blue: '#2C3B9B',
+                            teal: '#19716B',
+                            red: '#751C2C',
+                            magenta: '#B0347C',
+                            yellow: '#E5A93A',
+                            navy: '#1F2749',
+                            pink: '#DEB0B6',
+                            formbg: '#A1A5B8'
+                        }
+                    },
+                    boxShadow: {
+                        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'brutal-hover': '6px 6px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dots-bg {
+            background-image: radial-gradient(#d1d1d1 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+        
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 2rem;
+        }
+
+        .marquee__content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            min-width: 100%;
+            gap: 2rem;
+            animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-100% - 2rem)); }
+        }
+
+        /* Hide scrollbar for work cards */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-black overflow-x-hidden antialiased">
+
+    <nav class="fixed right-0 top-1/3 z-50 hidden lg:flex flex-col gap-4 transform translate-x-4 hover:translate-x-0 transition-transform duration-300 pr-8">
+        <a href="#about" class="bg-brand-teal text-white font-bold px-6 py-2 rounded-l-full border-y-4 border-l-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all">ABOUT</a>
+        <a href="#work" class="bg-brand-red text-white font-bold px-6 py-2 rounded-l-full border-y-4 border-l-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all">WORK</a>
+        <a href="#contact" class="bg-brand-yellow text-black font-bold px-6 py-2 rounded-l-full border-y-4 border-l-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all">SAY HI</a>
+    </nav>
+
+    <header class="fixed top-0 left-0 w-full bg-brand-bg z-40 border-b-2 border-black/10">
+        <div class="px-6 py-4 lg:px-12">
+            <h2 class="text-2xl font-bold tracking-tight">Rahul Vanani<span class="text-brand-red ml-1">✦</span></h2>
+        </div>
+    </header>
+
+    <section class="min-h-screen bg-brand-bg dots-bg pt-32 pb-20 px-6 lg:px-12 flex flex-col justify-center">
+        <div class="max-w-6xl mx-auto w-full">
+            
+            <div class="inline-block border-2 border-dashed border-black rounded-lg px-4 py-2 mb-8">
+                <span class="font-bold text-sm tracking-widest uppercase">✦ Freelancer </span>
+            </div>
+
+            <h1 class="font-display text-[18vw] lg:text-[14rem] leading-[0.8] tracking-normal mb-8">
+                <span class="text-black block">RAHUL</span>
+                <span class="text-brand-blue block">VANANI</span>
+            </h1>
+
+            <div class="flex flex-wrap gap-4 mb-10">
+                <span class="bg-brand-teal text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Project Manager</span>
+                <span class="bg-brand-red text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Developer</span>
+                <span class="bg-brand-magenta text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Testing</span>
+                <span class="bg-brand-yellow text-black font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">LinkedIn Content Creator</span>
+            </div>
+
+            <p class="text-xl lg:text-2xl max-w-2xl font-medium mb-10 text-gray-800 leading-relaxed">
+                I manage projects, build and test websites. <span class="font-bold text-black"> Freelance, and fully remote.</span>
+            </p>
+
+            <div class="flex flex-wrap gap-6">
+                <a href="https://wa.me/919824399443" class="bg-brand-teal text-white font-bold px-8 py-4 rounded-xl border-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all text-lg">
+                    Message on WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/in/rahul-vanani-72ba60311/" class="bg-white text-black font-bold px-8 py-4 rounded-xl border-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all text-lg">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-brand-teal text-white py-24 px-6 lg:px-12 border-t-8 border-black">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="inline-block border-2 border-dashed border-white rounded-lg px-4 py-2 mb-8">
+                <span class="font-bold text-sm tracking-widest uppercase">(01) ABOUT</span>
+            </div>
+
+            <h2 class="font-display text-7xl lg:text-9xl mb-12 uppercase leading-[0.9]">
+                ONE OPERATOR. <span class="text-brand-yellow">FOUR ROLES.</span>
+            </h2>
+
+            <div class="bg-[#99C5C1] text-black p-8 lg:p-12 rounded-3xl border-4 border-black shadow-brutal max-w-4xl mb-20">
+                <p class="text-xl lg:text-2xl leading-relaxed font-medium">
+                    I'm a multidisciplinary freelancer currently pursuing a <span class="font-bold">B.Tech in Information Technology</span> at A.D. Patel Institute of Technology. I specialize in <span class="font-bold">IT project management, development, testing, and LinkedIn content creation.</span> I build things, run teams, and help businesses grow through smart tech and clear strategy.
+                </p>
+            </div>
+
+            <div class="max-w-4xl">
+                <h3 class="font-display text-5xl lg:text-6xl uppercase mb-4">ANAND TO SURAT</h3>
+                <p class="text-xl font-medium">I study in <span class="font-bold">Anand</span>, and you'll often find me in <span class="font-bold">Surat</span> too.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-brand-blue border-y-8 border-black py-4 marquee font-display text-4xl lg:text-5xl text-white uppercase tracking-wider">
+        <div class="marquee__content whitespace-nowrap">
+            <span>TESTING <span class="text-brand-yellow ml-2">✦</span></span>
+            <span>PROJECT MANAGEMENT <span class="text-brand-yellow ml-2">✦</span></span>
+            <span>DEVELOPMENT <span class="text-brand-yellow ml-2">✦</span></span>
+            <span>LINKEDIN CONTENT <span class="text-brand-yellow ml-2">✦</span></span>
+        </div>
+        <div class="marquee__content whitespace-nowrap" aria-hidden="true">
+            <span>TESTING <span class="text-brand-yellow ml-2">✦</span></span>
+            <span>PROJECT MANAGEMENT <span class="text-brand-yellow ml-2">✦</span></span>
+            <span>DEVELOPMENT <span class="text-brand-yellow ml-2">✦</span></span>
+            <span>LINKEDIN CONTENT <span class="text-brand-yellow ml-2">✦</span></span>
+        </div>
+    </div>
+
+    <section id="work" class="bg-brand-red text-white py-24 pl-6 lg:pl-12 border-b-8 border-black overflow-hidden">
+        <div class="max-w-[100rem] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20">
+            
+            <div class="lg:w-1/3 flex-shrink-0 flex flex-col justify-center pr-6 lg:pr-0">
+                <div class="inline-block border-2 border-dashed border-white rounded-lg px-4 py-2 mb-8 w-max">
+                    <span class="font-bold text-sm tracking-widest uppercase">(02) WORK</span>
+                </div>
+
+                <h2 class="font-display text-7xl lg:text-9xl mb-8 uppercase leading-[0.9]">
+                    STUFF I'VE <span class="text-brand-yellow block">SHIPPED.</span>
+                </h2>
+                <p class="text-sm font-bold tracking-widest uppercase flex items-center">
+                    KEEP SCROLLING <span class="ml-2">→</span>
+                </p>
+            </div>
+            
+            <div class="lg:w-2/3 flex overflow-x-auto gap-6 pb-12 pt-4 hide-scroll snap-x pr-6 lg:pr-12">
+                
+                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-white px-3 py-1 text-xs font-bold uppercase rounded-full border border-black">Testing</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Climate-tech web application</h3>
+                    <p class="font-medium text-gray-800">Owned manual testing, bug reports and test documentation across a climate-tech web app.</p>
+                </div>
+
+                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-blue uppercase rounded-full border border-black">Project Manager</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Industrial company website</h3>
+                    <p class="font-medium text-gray-800">Coordinated scope, sprints and client communication end-to-end for an industrial company's website launch.</p>
+                </div>
+
+                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-blue uppercase rounded-full border border-black">Project Manager</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Chemical company product site</h3>
+                    <p class="font-medium text-gray-800">Managed timelines, content and delivery for a chemical company's product website.</p>
+                </div>
+
+                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-teal uppercase rounded-full border border-black">Developer</span>
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-yellow uppercase rounded-full border border-black">Testing</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Medical store website</h3>
+                    <p class="font-medium text-gray-800">Developed and tested a local medical store's website end-to-end: layout, catalog and contact flow.</p>
+                </div>
+
+                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-teal uppercase rounded-full border border-black">Developer</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Artisan bakery storefront</h3>
+                    <p class="font-medium text-gray-800">Built and shipped an artisan bakery's online storefront end-to-end: layout, content and made-to-order flow.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-brand-navy text-white py-24 px-6 lg:px-12">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="inline-block border-2 border-dashed border-white rounded-lg px-4 py-2 mb-8">
+                <span class="font-bold text-sm tracking-widest uppercase">(03) CONTACT</span>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+                
+                <div class="lg:w-1/2">
+                    <h2 class="font-display text-7xl lg:text-9xl mb-6 uppercase leading-[0.9]">
+                        LET'S BUILD <span class="text-brand-yellow block">SOMETHING.</span>
+                    </h2>
+                    <p class="text-lg lg:text-xl font-medium text-gray-300">
+                        "The work is the only thing that works."
+                    </p>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <div class="bg-brand-formbg p-8 lg:p-10 rounded-3xl border-4 border-black">
+                        <form class="flex flex-col gap-6" onsubmit="sendWhatsApp(event)">
+                            
+                            <div>
+                                <label class="block text-black font-bold mb-2">Full Name</label>
+                                <input id="form-name" type="text" placeholder="Your name" class="w-full p-4 rounded-xl border-4 border-black focus:outline-none focus:ring-4 focus:ring-brand-teal/50 text-black font-medium" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-black font-bold mb-2">Message</label>
+                                <textarea id="form-message" rows="4" placeholder="Tell me a bit about your project..." class="w-full p-4 rounded-xl border-4 border-black focus:outline-none focus:ring-4 focus:ring-brand-teal/50 text-black font-medium resize-none" required></textarea>
+                            </div>
+
+                            <button type="submit" class="bg-brand-teal text-white font-bold text-lg w-full py-4 rounded-xl border-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all mt-2">
+                                Send on WhatsApp →
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="flex gap-4 mt-10 flex-wrap">
+                        <a href="https://www.linkedin.com/in/rahul-vanani-72ba60311/" class="bg-brand-bg w-12 h-12 rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex items-center justify-center text-black">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://github.com/RAHULVANANI" class="bg-brand-bg w-12 h-12 rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex items-center justify-center text-black">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://wa.me/919824399443" class="bg-brand-bg w-12 h-12 rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex items-center justify-center text-black">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.898-4.45 9.898-9.898 0-2.64-1.028-5.122-2.894-6.988-1.865-1.867-4.346-2.895-6.989-2.895-5.448 0-9.897 4.45-9.897 9.898 0 2.012.569 3.905 1.637 5.66l-1.096 4.004 4.145-1.073zm11.353-8.835c-.259-.13-1.534-.758-1.772-.845-.238-.087-.411-.13-.585.13s-.669.845-.82 1.018c-.15.174-.301.195-.561.065-1.144-.572-2.316-1.309-3.324-2.285-.779-.753-1.319-1.669-1.472-1.929-.153-.261-.016-.401.114-.53.115-.115.259-.303.389-.455.13-.151.173-.259.26-.433.086-.173.043-.324-.022-.455-.065-.13-.585-1.408-.8-1.929-.211-.508-.426-.439-.585-.447-.15-.008-.323-.009-.496-.009s-.455.065-.693.325c-.238.261-.911.889-.911 2.167s.933 2.513 1.063 2.686c.13.174 1.832 2.793 4.439 3.921 2.179.943 2.871.792 3.391.751.581-.046 1.772-.724 2.022-1.424.25-.7.25-1.301.173-1.424-.077-.125-.251-.198-.51-.328z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/rahul_vanani82/" class="bg-brand-bg w-12 h-12 rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex items-center justify-center text-black">
+                             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="mailto:vananirahul2606@gmail.com" class="bg-brand-bg w-12 h-12 rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex items-center justify-center text-black">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.866l5.6-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function sendWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const message = document.getElementById('form-message').value;
+            const phone = "919824399443";
+            
+            const text = `Hi Rahul, my name is ${encodeURIComponent(name)}. ${encodeURIComponent(message)}`;
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
