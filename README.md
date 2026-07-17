@@ -2,10 +2,9 @@
 
 A single-page personal portfolio website for **Rahul Vanani** — Freelancer, Project Manager, Developer & Data Analyst.
 
-🔗 **Live Site:** [Add your live URL here once deployed]
+🔗 **Live Site:** [https://rahulvanani.github.io/PortfolioR/]
 
-![Portfolio Preview](about-bg.jpg.jpeg)
-
+![Portfolio Preview]
 ## About
 
 This is a bold, brutalist-style portfolio site built to showcase my work across three disciplines: **Data, Development, and Delivery**. I'm currently pursuing a B.Tech in Information Technology at A.D. Patel Institute of Technology, working freelance and fully remote.
