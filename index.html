@@ -89,37 +89,67 @@
         </div>
     </header>
 
-    <section class="min-h-screen bg-brand-bg dots-bg pt-32 pb-20 px-6 lg:px-12 flex flex-col justify-center">
-        <div class="max-w-6xl mx-auto w-full">
+    <section class="min-h-screen bg-brand-bg dots-bg pt-32 pb-20 px-6 lg:px-12 flex flex-col justify-center overflow-hidden">
+        <!-- Changed max-w-6xl to max-w-7xl to give a little more width for the side-by-side layout -->
+        <div class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
             
-            <div class="inline-block border-2 border-dashed border-black rounded-lg px-4 py-2 mb-8">
-                <span class="font-bold text-sm tracking-widest uppercase">✦ Freelancer </span>
+            <!-- LEFT COLUMN: Your Text & Buttons -->
+            <div class="w-full lg:w-3/5 flex flex-col items-start relative z-10">
+                
+                <div class="inline-block border-2 border-dashed border-black rounded-lg px-4 py-2 mb-8 bg-white">
+                    <span class="font-bold text-sm tracking-widest uppercase">✦ Freelancer </span>
+                </div>
+
+                <!-- Adjusted text size slightly for lg screens so it fits nicely next to the photo -->
+                <h1 class="font-display text-[18vw] lg:text-[10rem] xl:text-[13rem] leading-[0.85] tracking-normal mb-8">
+                    <span class="text-black block">RAHUL</span>
+                    <span class="text-brand-blue block">VANANI</span>
+                </h1>
+
+                <div class="flex flex-wrap gap-4 mb-10">
+                    <span class="bg-brand-teal text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Project Manager</span>
+                    <span class="bg-brand-red text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Developer</span>
+                    <span class="bg-brand-magenta text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Data Analyst</span>
+
+                </div>
+
+                <p class="text-xl lg:text-2xl max-w-2xl font-medium mb-10 text-gray-800 leading-relaxed">
+                    I manage projects, build and test websites. <span class="font-bold text-black"> Freelance, and fully remote.</span>
+                </p>
+
+                <div class="flex flex-wrap gap-6">
+                    <a href="https://wa.me/919824399443" class="bg-brand-teal text-white font-bold px-8 py-4 rounded-xl border-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all text-lg">
+                        Message on WhatsApp
+                    </a>
+                    <a href="https://www.linkedin.com/in/rahul-vanani-72ba60311/" class="bg-white text-black font-bold px-8 py-4 rounded-xl border-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all text-lg">
+                        Connect on LinkedIn
+                    </a>
+                </div>
             </div>
 
-            <h1 class="font-display text-[18vw] lg:text-[14rem] leading-[0.8] tracking-normal mb-8">
-                <span class="text-black block">RAHUL</span>
-                <span class="text-brand-blue block">VANANI</span>
-            </h1>
+            <!-- RIGHT COLUMN: Your Photo -->
+            <!-- Added pr-20 on lg screens so your photo doesn't hide behind the floating side menu -->
+            <div class="w-full lg:w-2/5 flex justify-center lg:justify-end lg:pr-20 relative z-10 mt-8 lg:mt-0">
+                
+                <!-- Image Wrapper Container -->
+                <div class="relative w-64 h-80 sm:w-80 sm:h-[400px] lg:w-[320px] lg:h-[440px] xl:w-[380px] xl:h-[500px] rotate-2 hover:rotate-0 transition-transform duration-300 cursor-pointer">
+                    
+                    <!-- 📸 REPLACE 'your-photo.jpg' WITH YOUR ACTUAL IMAGE FILE NAME -->
+                    <img 
+                        src="about-bg.jpg.jpeg" 
+                        alt="Rahul Vanani" 
+                        class="object-cover w-full h-full rounded-[2rem] border-4 border-black shadow-brutal"
+                    />
 
-            <div class="flex flex-wrap gap-4 mb-10">
-                <span class="bg-brand-teal text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Project Manager</span>
-                <span class="bg-brand-red text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Developer</span>
-                <span class="bg-brand-magenta text-white font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">Testing</span>
-                <span class="bg-brand-yellow text-black font-bold px-5 py-2 rounded-full border-2 border-black shadow-brutal text-sm lg:text-base">LinkedIn Content Creator</span>
+                    <!-- Floating 'That's me!' badge -->
+                    <!-- Utilizing your custom config colors (bg-brand-yellow) and shadows (shadow-brutal) -->
+                    <div class="absolute -bottom-4 -left-6 bg-brand-yellow text-black text-xs md:text-sm font-bold uppercase tracking-wider px-4 py-2 border-2 border-black rounded-full shadow-brutal -rotate-6">
+                        That's me! 
+                    </div>
+                    
+                </div>
             </div>
 
-            <p class="text-xl lg:text-2xl max-w-2xl font-medium mb-10 text-gray-800 leading-relaxed">
-                I manage projects, build and test websites. <span class="font-bold text-black"> Freelance, and fully remote.</span>
-            </p>
-
-            <div class="flex flex-wrap gap-6">
-                <a href="https://wa.me/919824399443" class="bg-brand-teal text-white font-bold px-8 py-4 rounded-xl border-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all text-lg">
-                    Message on WhatsApp
-                </a>
-                <a href="https://www.linkedin.com/in/rahul-vanani-72ba60311/" class="bg-white text-black font-bold px-8 py-4 rounded-xl border-4 border-black shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all text-lg">
-                    Connect on LinkedIn
-                </a>
-            </div>
         </div>
     </section>
 
@@ -131,8 +161,11 @@
             </div>
 
             <h2 class="font-display text-7xl lg:text-9xl mb-12 uppercase leading-[0.9]">
-                ONE OPERATOR. <span class="text-brand-yellow">FOUR ROLES.</span>
+                ONE OPERATOR. <span class="text-brand-yellow">THREE ROLES.</span>
             </h2>
+            <p class="text-xl lg:text-2xl max-w-2xl font-medium mb-10 text-gray-800 leading-relaxed">
+     Data, Development and Delivery. <span class="font-bold text-black">Freelance, and fully remote.</span>
+</p>
 
             <div class="bg-[#99C5C1] text-black p-8 lg:p-12 rounded-3xl border-4 border-black shadow-brutal max-w-4xl mb-20">
                 <p class="text-xl lg:text-2xl leading-relaxed font-medium">
@@ -152,13 +185,11 @@
             <span>TESTING <span class="text-brand-yellow ml-2">✦</span></span>
             <span>PROJECT MANAGEMENT <span class="text-brand-yellow ml-2">✦</span></span>
             <span>DEVELOPMENT <span class="text-brand-yellow ml-2">✦</span></span>
-            <span>LINKEDIN CONTENT <span class="text-brand-yellow ml-2">✦</span></span>
         </div>
         <div class="marquee__content whitespace-nowrap" aria-hidden="true">
             <span>TESTING <span class="text-brand-yellow ml-2">✦</span></span>
             <span>PROJECT MANAGEMENT <span class="text-brand-yellow ml-2">✦</span></span>
             <span>DEVELOPMENT <span class="text-brand-yellow ml-2">✦</span></span>
-            <span>LINKEDIN CONTENT <span class="text-brand-yellow ml-2">✦</span></span>
         </div>
     </div>
 
@@ -171,7 +202,7 @@
                 </div>
 
                 <h2 class="font-display text-7xl lg:text-9xl mb-8 uppercase leading-[0.9]">
-                    STUFF I'VE <span class="text-brand-yellow block">SHIPPED.</span>
+                    FEATURED <span class="text-brand-yellow block">WORK.</span>
                 </h2>
                 <p class="text-sm font-bold tracking-widest uppercase flex items-center">
                     KEEP SCROLLING <span class="ml-2">→</span>
@@ -179,46 +210,31 @@
             </div>
             
             <div class="lg:w-2/3 flex overflow-x-auto gap-6 pb-12 pt-4 hide-scroll snap-x pr-6 lg:pr-12">
-                
+
                 <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
                     <div class="flex gap-2 mb-6">
-                        <span class="bg-white px-3 py-1 text-xs font-bold uppercase rounded-full border border-black">Testing</span>
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-teal uppercase rounded-full border border-black">Machine Learing</span>
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-yellow uppercase rounded-full border border-black">Python</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Climate-tech web application</h3>
-                    <p class="font-medium text-gray-800">Owned manual testing, bug reports and test documentation across a climate-tech web app.</p>
+                    <h3 class="text-2xl font-bold mb-4">Sales & Profit Predictor</h3>
+                    <p class="font-medium text-gray-800">"Engineered and evaluated 4 machine learning models (including Gradient Boosting and Random Forest) to predict sales profits and uncover hidden revenue trends."</p>
                 </div>
 
                 <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
                     <div class="flex gap-2 mb-6">
-                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-blue uppercase rounded-full border border-black">Project Manager</span>
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-teal uppercase rounded-full border border-black"> Data Analysis</span>
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-yellow uppercase rounded-full border border-black">Python</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Netflix Data Analysis</h3>
+                    <p class="font-medium text-gray-800">"Processed 50,000+ records to visualize streaming trends and deployed Random Forest models to successfully predict content types and user scores."</p>
+                </div>
+
+                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-blue uppercase rounded-full border border-black">Developer</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Industrial company website</h3>
                     <p class="font-medium text-gray-800">Coordinated scope, sprints and client communication end-to-end for an industrial company's website launch.</p>
-                </div>
-
-                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
-                    <div class="flex gap-2 mb-6">
-                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-blue uppercase rounded-full border border-black">Project Manager</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Chemical company product site</h3>
-                    <p class="font-medium text-gray-800">Managed timelines, content and delivery for a chemical company's product website.</p>
-                </div>
-
-                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
-                    <div class="flex gap-2 mb-6">
-                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-teal uppercase rounded-full border border-black">Developer</span>
-                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-yellow uppercase rounded-full border border-black">Testing</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Medical store website</h3>
-                    <p class="font-medium text-gray-800">Developed and tested a local medical store's website end-to-end: layout, catalog and contact flow.</p>
-                </div>
-
-                <div class="min-w-[320px] lg:min-w-[400px] bg-brand-pink text-black p-8 rounded-3xl border-4 border-black shadow-brutal flex flex-col snap-start shrink-0">
-                    <div class="flex gap-2 mb-6">
-                        <span class="bg-white px-3 py-1 text-xs font-bold text-brand-teal uppercase rounded-full border border-black">Developer</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Artisan bakery storefront</h3>
-                    <p class="font-medium text-gray-800">Built and shipped an artisan bakery's online storefront end-to-end: layout, content and made-to-order flow.</p>
                 </div>
 
             </div>
